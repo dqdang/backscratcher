@@ -1,3 +1,4 @@
+import argparse
 import json
 import requests
 from string import Template
@@ -23,6 +24,16 @@ def grab_sites(names):
     return all_sites
 
 
+def only_gg(names):
+    all_sites = []
+    op_gg = "https://na.op.gg/summoner/userName=$user"
+    for name in names.keys():
+        for account in names[name]:
+            s = Template(op_gg)
+            all_sites.append(s.substitute(user=account))
+    return all_sites
+
+
 def open_sites_in_browser(sites):
     chrome_path = 'C:/Program Files (x86)/Google/Chrome/Application/chrome.exe %s --incognito'
     browser = webbrowser.get(chrome_path)
@@ -30,9 +41,20 @@ def open_sites_in_browser(sites):
         browser.open_new(site)
 
 
+def make_parser():
+    parser = argparse.ArgumentParser(description="open sites from sites.txt for all summoners in summoners.json")
+    parser.add_argument("--opgg", dest="opgg", action='store_true')
+    return parser
+
+
 def main():
     names = get_summoner_names()
-    sites = grab_sites(names)
+    parser = make_parser()
+    args = parser.parse_args()
+    if args.opgg:
+        sites = only_gg(names)
+    else:
+        sites = grab_sites(names)
     open_sites_in_browser(sites)
 
 
