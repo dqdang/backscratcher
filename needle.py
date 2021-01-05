@@ -1,5 +1,6 @@
 import argparse
 import json
+import os
 import requests
 from string import Template
 import webbrowser
@@ -35,8 +36,11 @@ def only_gg(names):
 
 
 def open_sites_in_browser(sites):
-    chrome_path = 'C:/Program Files (x86)/Google/Chrome/Application/chrome.exe %s --incognito'
-    browser = webbrowser.get(chrome_path)
+    chrome_executable = 'C:/Program Files (x86)/Google/Chrome/Application/chrome.exe %s --incognito'
+    chrome_path = 'C:/Program Files (x86)/Google/Chrome/'
+    if not os.path.exists(chrome_path):
+        chrome_executable = 'C:/Program Files/Google/Chrome/Application/chrome.exe %s --incognito'
+    browser = webbrowser.get(chrome_executable)
     for site in sites:
         browser.open_new(site)
 
