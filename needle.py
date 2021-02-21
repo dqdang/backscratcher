@@ -40,7 +40,12 @@ def open_sites_in_browser(sites):
     chrome_path = 'C:/Program Files (x86)/Google/Chrome/'
     if not os.path.exists(chrome_path):
         chrome_executable = 'C:/Program Files/Google/Chrome/Application/chrome.exe %s --incognito'
-    browser = webbrowser.get(chrome_executable)
+    try:
+        browser = webbrowser.get(chrome_executable)
+    except Exception as e:
+        print(e)
+        print("Google Chrome not installed")
+        return
     for site in sites:
         browser.open_new(site)
 
