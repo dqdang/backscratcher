@@ -1,2 +1,2 @@
 # backscratcher
-Open League of Legends match history links for accounts provided
+Open League of Legends match history links for list of accounts
