@@ -3,6 +3,4 @@ https://na.poroscience.com/s/$user
 https://www.leaguespy.gg/search?search=$user&region=NA
 https://u.gg/lol/profile/na1/$user/overview
 https://lolprofile.net/summoner/na/$user
-http://www.lolskill.net/summoner/NA/$user
 https://lolchess.gg/profile/na/$user
-https://kda.gg/player/NA1/$user
