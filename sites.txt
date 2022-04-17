@@ -2,7 +2,6 @@ https://na.op.gg/summoner/userName=$user
 https://na.poroscience.com/s/$user
 https://blitz.gg/lol/profile/na1/$user
 https://app.mobalytics.gg/lol/profile/na/$user/overview
-https://www.leaguespy.gg/search?search=$user&region=NA
 https://u.gg/lol/profile/na1/$user/overview
 https://lolprofile.net/summoner/na/$user
 https://lolchess.gg/profile/na/$user
