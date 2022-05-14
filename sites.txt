@@ -1,5 +1,4 @@
 https://na.op.gg/summoner/userName=$user
-https://na.poroscience.com/s/$user
 https://blitz.gg/lol/profile/na1/$user
 https://app.mobalytics.gg/lol/profile/na/$user/overview
 https://u.gg/lol/profile/na1/$user/overview
