@@ -5,4 +5,4 @@ https://u.gg/lol/profile/na1/$user/overview
 https://lolprofile.net/summoner/na/$user
 https://lolchess.gg/profile/na/$user
 https://senpai.gg/lol/profile/na/$user
-https://challenges.darkintaqt.com/na/dqd
+https://challenges.darkintaqt.com/na/$user
