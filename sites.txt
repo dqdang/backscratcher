@@ -1,4 +1,5 @@
 https://na.op.gg/summoner/userName=$user
+https://www.deeplol.gg/summoner/NA/$user
 https://blitz.gg/lol/profile/na1/$user
 https://app.mobalytics.gg/lol/profile/na/$user/overview
 https://u.gg/lol/profile/na1/$user/overview
