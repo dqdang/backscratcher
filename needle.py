@@ -3,6 +3,7 @@ import json
 import os
 import requests
 from string import Template
+import sys
 import webbrowser
 
 
@@ -36,20 +37,20 @@ def only_gg(names):
 
 
 def open_sites_in_browser(sites):
-    chrome_executable = 'C:/Program Files (x86)/Google/Chrome/Application/chrome.exe %s --incognito'
-    chrome_path = 'C:/Program Files (x86)/Google/Chrome/'
-    if not os.path.exists(chrome_path):
-        chrome_executable = 'C:/Program Files/Google/Chrome/Application/chrome.exe %s --incognito'
-        if not os.path.exists(chrome_path):
-            chrome_executable = 'C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe --inprivate %s'
     try:
-        browser = webbrowser.get(chrome_executable)
+        if sys.platform == 'win32':
+            browser = webbrowser.get('windows-default')
+        elif sys.platform == 'darwin':
+            browser = webbrowser.get('macos')
+        else:
+            browser = webbrowser.get('mozilla')
     except Exception as e:
         print(e)
-        print("Google Chrome not installed")
         return
-    for site in sites:
-        browser.open_new_tab(site)
+    browser.open(sites[0], new=1)
+    if len(sites) > 1:
+        for site in sites[1:]:
+            browser.open_new_tab(site)
 
 
 def make_parser():
