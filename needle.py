@@ -40,6 +40,8 @@ def open_sites_in_browser(sites):
     chrome_path = 'C:/Program Files (x86)/Google/Chrome/'
     if not os.path.exists(chrome_path):
         chrome_executable = 'C:/Program Files/Google/Chrome/Application/chrome.exe %s --incognito'
+        if not os.path.exists(chrome_path):
+            chrome_executable = 'C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe --inprivate %s'
     try:
         browser = webbrowser.get(chrome_executable)
     except Exception as e:
@@ -47,7 +49,7 @@ def open_sites_in_browser(sites):
         print("Google Chrome not installed")
         return
     for site in sites:
-        browser.open_new(site)
+        browser.open_new_tab(site)
 
 
 def make_parser():
