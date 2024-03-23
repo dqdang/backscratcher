@@ -1,9 +1,8 @@
-https://na.op.gg/summoner/userName=$user
-https://www.deeplol.gg/summoner/NA/$user
-https://blitz.gg/lol/profile/na1/$user
-https://app.mobalytics.gg/lol/profile/na/$user/overview
-https://u.gg/lol/profile/na1/$user/overview
+https://na.op.gg/summoner/userName=$user-$tag
+https://www.deeplol.gg/summoner/NA/$user-$tag
+https://blitz.gg/lol/profile/na1/$user-$tag
+https://app.mobalytics.gg/lol/profile/na/$user-$tag/overview
+https://u.gg/lol/profile/na1/$user-$tag/overview
 https://lolprofile.net/summoner/na/$user
-https://lolchess.gg/profile/na/$user
-https://senpai.gg/lol/profile/na/$user
-https://challenges.darkintaqt.com/na/$user/statistics
+https://lolchess.gg/profile/na/$user-$tag
+https://challenges.darkintaqt.com/na/$user-$tag/statistics

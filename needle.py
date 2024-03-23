@@ -22,13 +22,15 @@ def grab_sites(names):
                 for i in range(len(sites)):
                     if sites[i] != "\n":
                         s = Template(sites[i])
-                        all_sites.append(s.substitute(user=account))
+                        username = account.split("#")[0]
+                        tag = account.split("#")[1]
+                        all_sites.append(s.substitute(user=username, tag=tag))
     return all_sites
 
 
 def only_gg(names):
     all_sites = []
-    op_gg = "https://na.op.gg/summoner/userName=$user"
+    op_gg = "https://na.op.gg/summoner/userName=$user$tag"
     for name in names.keys():
         for account in names[name]:
             s = Template(op_gg)
