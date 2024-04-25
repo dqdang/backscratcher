@@ -6,3 +6,4 @@ https://u.gg/lol/profile/na1/$user-$tag/overview
 https://lolprofile.net/summoner/na/$user
 https://lolchess.gg/profile/na/$user-$tag
 https://challenges.darkintaqt.com/na/$user-$tag/statistics
+https://xdx.gg/$user-$tag
